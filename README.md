@@ -1,2 +1,2 @@
-# 20203025	Gongchaeyeon
+# 2020XXX	Gongchaeyeon
 # Kookmin Univ. SW
