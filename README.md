@@ -1,2 +1,2 @@
 # 2020XXX	Gongchaeyeon
-# Kookmin Univ. SW
+# Kookmin Univ. computer science
