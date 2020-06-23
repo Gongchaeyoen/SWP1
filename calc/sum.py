@@ -10,15 +10,11 @@ def application(environ, start_response):
 
         sum, mul = 0, 0
 
-        try:
-                a,b = int(a), int(b)
-
+	if '' not in [a,b]:
+		a,b = int(a), int(b)
+	
                 sum = a+b
                 mul= a*b
-
-        except ValueError:
-                sum='Please chech the input value'
-                mul='Please chech the input value'
 
         response_body = html % {
 
