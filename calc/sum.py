@@ -8,15 +8,18 @@ def application(environ, start_response):
         b = d.get('b', [''])[0]
 	
 	sum, mul = 0,0
-	if '' not in[a,b]:
+	if a.isdigit() and b.isdigit(): 
 		a,b = int(a), int(b)
 		sum = a+b
 		mul = a*b
+	else:
+		sum = "Please check the input value"
+		mul = "please check the input value"
 	
         response_body = html % {
 
-                'sum': a+b,
-                'mul' :a*b 
+                'sum': sum,
+                'mul': mul 
         }
 
         start_response('200 OK', [
