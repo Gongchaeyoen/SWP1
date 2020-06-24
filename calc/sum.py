@@ -9,15 +9,20 @@ def application(environ, start_response):
 	
 	sum, mul = 0,0
 	
-	if a.isdigit() and b.isdigit():
-		a,b = int(a), int(b)
-		sum = a+b
-		mul = a*b
-		
-	else:	
+	if '' in [a,b]:
 		sum = "No input value found"
-		mul = "No input value found"
-	
+		mul = "No input value found"	
+	else:
+		try:	
+		
+			a,b = int(a), int(b)
+			sum = a+b
+			mul = a*b
+		
+		except ValueError:
+			sum = "Please enter only numbers"	
+			mul = "Please enter only numbers"
+			
         response_body = html % {
 
                 'sum': sum,
