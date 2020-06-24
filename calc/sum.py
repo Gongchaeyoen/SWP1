@@ -8,13 +8,15 @@ def application(environ, start_response):
         b = d.get('b', [''])[0]
 	
 	sum, mul = 0,0
-	if a.isdigit() and b.isdigit(): 
+	
+	if a.isdigit() and b.isdigit():
 		a,b = int(a), int(b)
 		sum = a+b
 		mul = a*b
-	else:
-		sum = "Please check the input value"
-		mul = "please check the input value"
+		
+	else:	
+		sum = "No input value found"
+		mul = "No input value found"
 	
         response_body = html % {
 
